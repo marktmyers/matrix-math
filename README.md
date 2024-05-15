@@ -1,4 +1,23 @@
-To install raja and setup the directory, you will run run.sh or setup_noncluster.sh depending if you are on the cluster or not. This will clone the raja repository and get the correct folders in order. Run.sh is still included in the repository, but it was not really used in the later testing. There are other scripts that are more relevant that are written about below.
+# RAJA Matrix Research
+
+## Description
+This is a research project for a Parallel and Distributed Systems course at James Madison University. The goal of this project was to find out the portability and applicability for the RAJA library. The RAJA library was tested against other parallelization libraries to see if it is a viable option. This was done with multiple algorithms, but the algorithm in this repository deals with matrix math including operations like guassian elimination and back substitution. The results for the testing can be found at this link: https://docs.google.com/spreadsheets/d/1XBDZMCorhAVTOxd4CGxJo1NEtBsGFzoL2hqxUYz1-LU/edit#gid=0 . 
+
+## Languages and Utilities Used
+- **C++**
+- **RAJA**
+- **CUDA**
+- **OpenMP**
+- **Pthreads**
+
+## Environments Used
+- **macOS**
+- **JMU Cluster**
+- **AMD**
+- **ARM**
+
+## How to Use
+To install raja and setup the directory, you will run setup.sh or setup_noncluster.sh depending if you are on the cluster or not. This will clone the raja repository and get the correct folders in order. Run.sh is still included in the repository, but it was not really used in the later testing. There are other scripts that are more relevant that are written about below.
 
 To run these programs, you have several different options. First, you can cd into /example and use the makefile to make each of the programs. You will have to use make all in order to make the cuda program. This was designed this way because some of the places we ran these programs did not have cuda.
 
@@ -15,3 +34,7 @@ sbatch --gres=gpu ./correct.sh
 sbatch --gres=gpu ./correct_.sh
 sbatch ./openmptiming.sh
 sbatch --gres=gpu ./cudatiming.sh
+
+
+## Contributing
+Contributions to this project are welcome! Please fork the repository and submit a pull request with your improvements.
